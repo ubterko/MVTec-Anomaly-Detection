@@ -154,6 +154,7 @@ class AutoEncoder:
         if color_mode == "grayscale":
             self.metrics = [metrics.ssim_metric(self.dynamic_range)]
             self.hist_keys = ("loss", "val_loss", "ssim", "val_ssim")
+        
         elif color_mode == "rgb":
             self.metrics = [metrics.mssim_metric(self.dynamic_range)]
             self.hist_keys = ("loss", "val_loss", "mssim", "val_mssim")
@@ -324,7 +325,7 @@ class AutoEncoder:
     ### Methods for getting finished training process info =====================
 
     def get_history_dict(self):
-        hist_dict = dict((key, self.hist.history[key]) for key in self.hist_keys)
+        hist_dict = dict((key, self.hist.history[key]) for key in self.hist_keys if key in self.hist.history)
         return hist_dict
 
     def get_info(self):

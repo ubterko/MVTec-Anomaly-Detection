@@ -8,7 +8,7 @@ VAL_SPLIT = 0.1
 
 # Learning Rate Finder parameters
 START_LR = 1e-5
-LR_MAX_EPOCHS = 8
+LR_MAX_EPOCHS = 10
 LRF_DECREASE_FACTOR = 0.85
 
 # Training parameters

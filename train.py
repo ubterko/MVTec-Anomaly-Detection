@@ -234,7 +234,7 @@ if __name__ == "__main__":
     else:
         logger.info("No GPU was detected. CNNs can be very slow without a GPU...")
     logger.info("Tensorflow version: {} ...".format(tf.__version__))
-    logger.info("Keras version: {} ...".format(keras.__version__))
+    # logger.info("Keras version: {} ...".format(keras.__version__))
     main(args)
 
 # Examples of commands to initiate training with mvtec architecture

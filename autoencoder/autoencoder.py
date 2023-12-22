@@ -163,7 +163,8 @@ class AutoEncoder:
 
         # compile model
         self.model.compile(
-            loss=self.loss_function, optimizer="adam", metrics=self.metrics
+            loss=self.loss_function, metrics=self.metrics optimizer=tf.keras.optimizers.legacy.Adam()
+            # loss=self.loss_function, optimizer="adam", metrics=self.metrics
         )
         return
 
